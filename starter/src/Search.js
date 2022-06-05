@@ -1,10 +1,12 @@
 import "./App.css";
 import { useState } from "react";
 
-const Search = () => {
+const Search = (props) => {
   const [showSearchPage, setShowSearchpage] = useState(false);
 
   return(
+    <div className="app">
+    {showSearchPage ? (
     <div className="search-books">
     <div className="search-books-bar">
       <a
@@ -24,8 +26,18 @@ const Search = () => {
       <ol className="books-grid"></ol>
     </div>
     </div>
-  )
+          ) : (
+<div>
+    </div>
 
+)}
+<div className="open-search">
+            <a onClick={() =>setShowSearchpage(!showSearchPage)
+            
+            }>Add a book</a>
+          </div>
+</div>
+);
 }
 
 export default Search

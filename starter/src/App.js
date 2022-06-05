@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div className="app">
-        <Search/>
+        <Search showSearchPage={showSearchPage}/>
         <div className="list-books">
           <div className="list-books-title">
             <h1>MyReads</h1>
@@ -253,9 +253,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="open-search">
-            <a onClick={() => setShowSearchpage(!showSearchPage)}>Add a book</a>
-          </div>
+          
         </div>
     </div>
   );
