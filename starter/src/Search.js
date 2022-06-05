@@ -4,41 +4,36 @@ import { useState } from "react";
 const Search = (props) => {
   const [showSearchPage, setShowSearchpage] = useState(false);
 
-  return(
+  return (
     <div className="app">
-    {showSearchPage ? (
-    <div className="search-books">
-    <div className="search-books-bar">
-      <a
-        className="close-search"
-        onClick={() => setShowSearchpage(!showSearchPage)}
-      >
-        Close
-      </a>
-      <div className="search-books-input-wrapper">
-        <input
-          type="text"
-          placeholder="Search by title, author, or ISBN"
-        />
+      {showSearchPage ? (
+        <div className="search-books">
+          <div className="search-books-bar">
+            <a
+              className="close-search"
+              onClick={() => setShowSearchpage(!showSearchPage)}
+            >
+              Close
+            </a>
+            <div className="search-books-input-wrapper">
+              <input
+                type="text"
+                placeholder="Search by title, author, or ISBN"
+              />
+            </div>
+          </div>
+          <div className="search-books-results">
+            <ol className="books-grid"></ol>
+          </div>
+        </div>
+      ) : (
+        <div></div>
+      )}
+      <div className="open-search">
+        <a onClick={() => setShowSearchpage(!showSearchPage)}>Add a book</a>
       </div>
     </div>
-    <div className="search-books-results">
-      <ol className="books-grid"></ol>
-    </div>
-    </div>
-          ) : (
-<div>
-    </div>
+  );
+};
 
-)}
-<div className="open-search">
-            <a onClick={() =>setShowSearchpage(!showSearchPage)
-            
-            }>Add a book</a>
-          </div>
-</div>
-);
-}
-
-export default Search
-
+export default Search;
