@@ -2,7 +2,7 @@ import "./App.css";
 import { useState } from "react";
 
 const Search = (props) => {
-  const [showSearchPage, setShowSearchpage] = useState(false);
+  const [showSearchPage, setShowSearchpage] = useState(true);
 
   return (
     <div className="app">
@@ -29,9 +29,6 @@ const Search = (props) => {
       ) : (
         <div></div>
       )}
-      <div className="open-search">
-        <a onClick={() => setShowSearchpage(!showSearchPage)}>Add a book</a>
-      </div>
     </div>
   );
 };
