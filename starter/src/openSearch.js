@@ -1,13 +1,14 @@
 import "./App.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
-const openSearch = (props) => {
+const OpenSearch = (props) => {
   const [showSearchPage, setShowSearchpage] = useState(false);
-  
-  return(
+
+  return (
     <div className="open-search">
-    <a onClick={() => setShowSearchpage(!showSearchPage)}>Add a book</a>
-  </div>
-  )
-}
-export default openSearch
+      <Link to="/search">Add a book</Link>
+    </div>
+  );
+};
+export default OpenSearch;

@@ -9,16 +9,16 @@ function App() {
 
   return (
     <div className="app">
-        {/* <Search showSearchPage={showSearchPage}/>
+      {/* <Search showSearchPage={showSearchPage}/>
         <Book/> */}
-          <Router>
+      <Router>
         <div className="app">
           <Switch>
             <Route path="/search">
-            <Search showSearchPage={showSearchPage}/>
+              <Search showSearchPage={showSearchPage} />
             </Route>
             <Route path="/">
-              <Book/>
+              <Book />
             </Route>
           </Switch>
         </div>
