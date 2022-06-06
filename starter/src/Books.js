@@ -4,7 +4,6 @@ import ShelfChanger from "./shelfChanger";
 import OpenSearch from "./openSearch";
 
 const Book = () => {
-  const [showSearchPage, setShowSearchpage] = useState(false);
   return (
     <div className="list-books">
       <div className="list-books-title">
@@ -165,7 +164,7 @@ const Book = () => {
             </div>
           </div>
         </div>
-        <OpenSearch showSearchPage={showSearchPage} />
+        <OpenSearch />
       </div>
     </div>
   );

@@ -2,9 +2,7 @@ import "./App.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Search = (props) => {
-  const [showSearchPage, setShowSearchpage] = useState(true);
-
+const Search = (props) => {  
   return (
     <div className="app">
       <div className="search-books">
